@@ -3,9 +3,15 @@ name: cron_workflow
 on:
   schedule:
     - cron: "* * * * *"   # <=== Change this value
+  push:
+    branches:
+      - master
+
 jobs:
   say_hello:
     runs-on: ubuntu-latest
     steps:
+    - name: Checkout github repository
+      uses: actions/checkout@v4
     - name: get name
       uses: ./.github/actions/greet_people
