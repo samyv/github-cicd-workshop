@@ -20,8 +20,8 @@ jobs:
       - run: pytest exercise_2
         continue-on-error: true
       - run: sed -i 's|https://img.shields.io/badge/tests-unknown-lightgrey|https://img.shields.io/badge/tests-passing-green|g' "README.md"
-      - run: git add .
-      - run: git commit -m "setting test badge to succeed"
       - run: git config --global user.email "samyvanv@gmail.com"
       - run: git config --global user.name "Samy Van Vooren"
+      - run: git add .
+      - run: git commit -m "setting test badge to succeed"
       - run: git push origin master
