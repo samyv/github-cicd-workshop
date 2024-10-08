@@ -1,0 +1,11 @@
+name: cron_workflow
+
+on:
+  schedule:
+    - cron: "*/5 * * * *"   # <=== Change this value
+jobs:
+  say_hello:
+    runs-on: ubuntu-latest
+    steps:
+    - name: get name
+      uses: ./.github/actions/greet_people

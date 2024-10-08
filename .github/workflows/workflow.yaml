@@ -21,11 +21,13 @@ jobs:
   deploy-job:
     strategy:
       max-parallel: 1
+      fail-fast: true
       matrix:
         env: [dev, int, prod]
     runs-on: ubuntu-latest
     needs: build-and-push
     environment: ${{matrix.env}}
+    
     steps:
       - name: Checkout github repository
         uses: actions/checkout@v4
