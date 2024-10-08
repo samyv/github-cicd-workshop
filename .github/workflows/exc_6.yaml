@@ -26,3 +26,6 @@ jobs:
       steps:
       - uses: actions/checkout@v4
       - run: sed -i 's|https://img.shields.io/badge/tests-unknown-lightgrey|https://img.shields.io/badge/tests-passing-green|g' "README.md"
+      - run: git add .
+      - run: git commit -m "setting test badge to succeed"
+      - run: git push origin master
