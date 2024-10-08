@@ -2,7 +2,7 @@ name: cron_workflow
 
 on:
   schedule:
-    - cron: "*/5 * * * *"   # <=== Change this value
+    - cron: "* * * * *"   # <=== Change this value
 jobs:
   say_hello:
     runs-on: ubuntu-latest
