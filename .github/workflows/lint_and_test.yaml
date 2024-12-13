@@ -14,7 +14,8 @@ jobs:
       with:
         python-version: '3.12'
     - run: pip install pytest
-    - run: pytest exercise_2
+    - run: pytest
+      working-directory: exercise_2
   lint:
     runs-on: ubuntu-latest
     steps:
